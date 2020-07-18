@@ -7,12 +7,12 @@ test("Renders the Contact Form", () => {
 });
 
 test("Checks if new contacts can be added", async () => {
-  const { findByLabelText, findByTestId } = render(<ContactForm />);
+  const { getByLabelText, findByTestId } = render(<ContactForm />);
 
-  const firstName = await findByLabelText(/first name*/i);
-  const lastName = await findByLabelText(/last name*/i);
-  const email = await findByLabelText(/email*/i);
-  const message = await findByLabelText(/message/i);
+  const firstName = getByLabelText(/first name*/i);
+  const lastName = getByLabelText(/last name*/i);
+  const email = getByLabelText(/email*/i);
+  const message = getByLabelText(/message/i);
 
   fireEvent.change(firstName, { target: { name: "firstName", value: "Alex" } });
   fireEvent.change(lastName, {
@@ -29,12 +29,12 @@ test("Checks if new contacts can be added", async () => {
 });
 
 test("Checks if first name error works", async () => {
-  const { findByLabelText, findByTestId } = render(<ContactForm />);
+  const { getByLabelText, findByTestId } = render(<ContactForm />);
 
-  const firstName = await findByLabelText(/first name*/i);
-  const lastName = await findByLabelText(/last name*/i);
-  const email = await findByLabelText(/email*/i);
-  const message = await findByLabelText(/message/i);
+  const firstName = getByLabelText(/first name*/i);
+  const lastName = getByLabelText(/last name*/i);
+  const email = getByLabelText(/email*/i);
+  const message = getByLabelText(/message/i);
 
   fireEvent.change(lastName, {
     target: { name: "lastName", value: "Compton" },
@@ -50,12 +50,12 @@ test("Checks if first name error works", async () => {
 });
 
 test("Checks first name length", async () => {
-  const { findByLabelText, findByTestId } = render(<ContactForm />);
+  const { getByLabelText, findByTestId } = render(<ContactForm />);
 
-  const firstName = await findByLabelText(/first name*/i);
-  const lastName = await findByLabelText(/last name*/i);
-  const email = await findByLabelText(/email*/i);
-  const message = await findByLabelText(/message/i);
+  const firstName = getByLabelText(/first name*/i);
+  const lastName = getByLabelText(/last name*/i);
+  const email = getByLabelText(/email*/i);
+  const message = getByLabelText(/message/i);
 
   fireEvent.change(firstName, {
     target: { name: "firstName", value: "Alexxxx" },
@@ -74,12 +74,12 @@ test("Checks first name length", async () => {
 });
 
 test("Checks if last name error works", async () => {
-  const { findByLabelText, findByTestId } = render(<ContactForm />);
+  const { getByLabelText, findByTestId } = render(<ContactForm />);
 
-  const firstName = await findByLabelText(/first name*/i);
-  const lastName = await findByLabelText(/last name*/i);
-  const email = await findByLabelText(/email*/i);
-  const message = await findByLabelText(/message/i);
+  const firstName = getByLabelText(/first name*/i);
+  const lastName = getByLabelText(/last name*/i);
+  const email = getByLabelText(/email*/i);
+  const message = getByLabelText(/message/i);
 
   fireEvent.change(firstName, { target: { name: "firstName", value: "Alex" } });
 
@@ -95,12 +95,12 @@ test("Checks if last name error works", async () => {
 });
 
 test("Checks if email error works", async () => {
-  const { findByLabelText, findByTestId } = render(<ContactForm />);
+  const { getByLabelText, findByTestId } = render(<ContactForm />);
 
-  const firstName = await findByLabelText(/first name*/i);
-  const lastName = await findByLabelText(/last name*/i);
-  const email = await findByLabelText(/email*/i);
-  const message = await findByLabelText(/message/i);
+  const firstName = getByLabelText(/first name*/i);
+  const lastName = getByLabelText(/last name*/i);
+  const email = getByLabelText(/email*/i);
+  const message = getByLabelText(/message/i);
 
   fireEvent.change(firstName, {
     target: { name: "firstName", value: "Alex" },
